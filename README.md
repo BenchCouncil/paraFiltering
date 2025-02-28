@@ -82,17 +82,22 @@ bash run.sh
 ### Benchmark Datasets
 - Download the benchmark datasets from the following link:
   - [BigVectorBench](https://github.com/BenchCouncil/BigVectorBench)
+    | Dataset | Data / Query Points |  Dimension  | Filtering ratio |  Labels |   Distance |  Download | Raw Data |
+    | :------: | :---: | :---: | :---: | :---: | :---: | :---: |  :---: | 
+    | ag_news-384-euclidean-filter | 120,000 / 7,600 | 384 | 25% | 1 | Euclidean | [HDF5](https://huggingface.co/datasets/Patrickcode/BigVectorBench/resolve/main/ag_news-384-euclidean-filter.hdf5)(208M) | [BVB](https://github.com/BenchCouncil/BigVectorBench?tab=readme-ov-file) |
+    | cc_news-384-euclidean-filter | 620,643 / 10,000 | 384 | < 10% | 1 | Euclidean | [HDF5](https://huggingface.co/datasets/Patrickcode/BigVectorBench/resolve/main/cc_news-384-euclidean-filter.hdf5)(994M) | [BVB](https://github.com/BenchCouncil/BigVectorBench?tab=readme-ov-file) |
+    | app_reviews-384-euclidean-filter | 277,936 / 10,000 | 384 | < 1% | 3 | Euclidean | [HDF5](https://huggingface.co/datasets/Patrickcode/BigVectorBench/resolve/main/app_reviews-384-euclidean-filter.hdf5)(457M) | [BVB](https://github.com/BenchCouncil/BigVectorBench?tab=readme-ov-file) |
+    | amazon-384-euclidean-5filter|	15,928,208 / 10,000 | 384 | < 0.1% | 5 | Euclidean | [HDF5](https://huggingface.co/datasets/Patrickcode/BigVectorBench/resolve/main/amazon-384-euclidean-5filter.hdf5)(24.8G) | [BVB](https://github.com/BenchCouncil/BigVectorBench?tab=readme-ov-file) |
+
 
 - The manually generated dataset, the data format is consistent with BigVectorBench, and the dataset download link is as follows:
-  - [1253828034HJP/paraFiltering](https://huggingface.co/datasets/1253828034HJP/paraFiltering)
-  - The data details are shown in the following table:
+  - [paraFiltering](https://huggingface.co/datasets/1253828034HJP/paraFiltering)
     | Dataset | Data / Query Points |  Dimension  | Filtering ratio |  Labels |   Distance |  Download | Raw Data |
-    | :---: | :---: | :---: | :---: | :---: | :---: | :---: |  :---: | 
-    | msong-1filter-80a.hdf5  | 990 000 / 10 000 | 420 | 80%| 1  | Euclidean | [Download](https://huggingface.co/datasets/1253828034HJP/paraFiltering/blob/main/msong-1filter-80a.hdf5) |  |
-    | deep1M-2filter-50a.hdf5 | 1 000 000 / 10 000 | 256 | 50% | 2 | Euclidean | [Download](https://huggingface.co/datasets/1253828034HJP/paraFiltering/blob/main/deep1M-2filter-50a.hdf5) |  |
-    | tiny5m-6filter-12a.hdf5 | 5 000 000 / 10 000 | 384 | 12% | 6 | Euclidean | [Download](https://huggingface.co/datasets/1253828034HJP/paraFiltering/blob/main/tiny5m-6filter-12a.hdf5) |  |
-    | sift10m-6filter-6a.hdf5 | 10 000 000 / 10 000 | 128 | 6% | 6 | Euclidean | [Download](https://huggingface.co/datasets/1253828034HJP/paraFiltering/blob/main/sift10m-6filter-6a.hdf5) |  |
-    
+    | :------: | :---: | :---: | :---: | :---: | :---: | :---: |  :---: | 
+    | msong-1filter-80a.hdf5  | 990,000 / 10,000 | 420 | 80%| 1  | Euclidean | [HDF5](https://huggingface.co/datasets/1253828034HJP/paraFiltering/blob/main/msong-1filter-80a.hdf5)(3.4G) | [SIFT](http://corpus-texmex.irisa.fr/) |
+    | deep1M-2filter-50a.hdf5 | 1,000,000 / 10,000 | 256 | 50% | 2 | Euclidean | [HDF5](https://huggingface.co/datasets/1253828034HJP/paraFiltering/blob/main/deep1M-2filter-50a.hdf5)(2.12G) | [DEEP1M](https://github.com/matsui528/deep1b_gt) |
+    | tiny5m-6filter-12a.hdf5 | 5,000,000 / 10,000 | 384 | 12% | 6 | Euclidean | [HDF5](https://huggingface.co/datasets/1253828034HJP/paraFiltering/blob/main/tiny5m-6filter-12a.hdf5)(15.7G) | [TINY5M](https://huggingface.co/timm/tiny_vit_5m_224.in1k) |
+    | sift10m-6filter-6a.hdf5 | 10,000,000  / 10,000 | 128 | 6% | 6 | Euclidean | [HDF5](https://huggingface.co/datasets/1253828034HJP/paraFiltering/blob/main/sift10m-6filter-6a.hdf5)(10.8G) | [SIFT10M](https://www.bing.com/search?q=sift10m&qs=n&form=QBRE&sp=-1&lq=0&pq=sift10m&sc=17-7&sk=&cvid=1324959AF80D4796A7EA1C1A39F0FA97&ghsh=0&ghacc=0&ghpl=) |
 
 
     
