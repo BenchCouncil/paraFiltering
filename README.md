@@ -47,8 +47,9 @@ python -c "import torch; print(torch.cuda.is_available())"
 
 ### Install Boost
 - Used to link C++ code to Python code, the main role is to filter the second round of search and sort the third round of search
+- After installing the boost library
 ```bash
-python setup.py build_ext --inplace
+python src/setup.py build_ext --inplace
 ```
 
 - Install the boost library
