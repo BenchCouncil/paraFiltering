@@ -50,6 +50,34 @@ python -c "import torch; print(torch.cuda.is_available())"
 ```bash
 python setup.py build_ext --inplace
 ```
+
+- 安装boost库
+  - boost版本需求为：1.71.0
+  - 通过以下指令检查boost版本
+  ```bash
+  dpkg -l | grep libboost
+  ```
+  - 如果没有安装boost库，可以通过boost官网下载安装包进行安装
+  - 安装boost库
+  ```bash
+  wget https://archives.boost.io/release/1.71.0/source/boost_1_71_0.tar.gz
+  tar -xzvf boost_1_71_0.tar.gz
+  cd boost_1_71_0
+  ./bootstrap.sh --prefix=/usr/local
+  ./b2 cxxflags="-std=c++17 -fopenmp" linkflags="-fopenmp"
+  ./b2 install
+  ```
+  - 安装成功后，可以通过以下指令检查boost库是否安装成功
+  ```bash
+  ls /usr/local/include/boost
+  ls /usr/local/lib | grep "boost_python310\|boost_numpy310"
+  ```
+  - 清理（可选）
+  ```bash
+  cd ..
+  rm -rf boost_1_71_0 boost_1_71_0.tar.gz
+  ```
+
 ## 运行
 ```bash
 bash run.sh
