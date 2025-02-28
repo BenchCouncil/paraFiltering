@@ -22,35 +22,35 @@ pip3 install -r requirements.txt
 ```
 
 ## Install PyTorch
-### Check cuda version
+### 检查cuda版本
 
 ```bash
 nvidia-smi
-# The cuda version will be displayed, for example: CUDA Version: 11.2, and the GPU model
+# 会显示cuda版本 例如：CUDA Version: 11.2，以及GPU型号
 nvcc --version
-# Display cuda versions, for example: Cuda compilation tools, release 11.2, V11.2.152
+# 显示cuda版本 例如：Cuda compilation tools, release 11.2, V11.2.152
 ```
 
-### Reference pytorch and cuda version correspondence
+### 参考pytorch与cuda版本对应关系
 - https://pytorch.org/get-started/previous-versions/
   
-  (For reference only) pytorch installation instructions:
+  (仅供参考) pytorch安装指令：
 ```bash
 conda install pytorch==2.1.1 torchvision==0.16.1 torchaudio==2.1.1 pytorch-cuda=12.1 -c pytorch -c nvidia -y
 ```
 
-- After a successful installation, test whether PyTorch is successfully installed.
+- 成功安装后，测试pytorch是否安装成功：
 ```bash
 python -c "import torch; print(torch.cuda.is_available())"
-# Expect : True
+# 预期 ： True
 ```
 
-### Boost
-- Used to link C++ code to Python code, the main role is to filter the second round of search and sort the third round of search
+### boost安装
+- 用于C++代码链接到python代码，主要作用与第二轮检索的筛选和第三轮检索的排序
 ```bash
 python setup.py build_ext --inplace
 ```
-## run
+## 运行
 ```bash
 bash run.sh
 ```
